@@ -3,6 +3,7 @@ import { withFirebase } from "./firebase";
 import Select from "react-select";
 import Creatable from "react-select/creatable";
 import { questLevels, materials, materialCount } from "../constants";
+import FiefQuests from "./FiefQuests.jsx";
 
 class FiefInput extends React.Component {
   constructor(props) {
@@ -12,6 +13,7 @@ class FiefInput extends React.Component {
     this._onMaterialChange = this._onMaterialChange.bind(this);
     this._onMaterialCountChange = this._onMaterialCountChange.bind(this);
     this._onSubmit = this._onSubmit.bind(this);
+    this._deleteQuest = this._deleteQuest.bind(this);
   }
   state = {
     level: undefined,
@@ -26,6 +28,7 @@ class FiefInput extends React.Component {
         <div className="row">
           <h3>{name}</h3>
         </div>
+        <FiefQuests data={data} onDelete={this._deleteQuest} />
         <div className="row">
           <div className="col-xs-1">
             <div className="box">
@@ -102,6 +105,11 @@ class FiefInput extends React.Component {
       material: material,
       materialCount: materialCount
     });
+  }
+
+  _deleteQuest(key) {
+    const { name, direction } = this.props;
+    this.props.firebase.db.ref(`data/${direction}/${name}/${key}`).remove();
   }
 }
 

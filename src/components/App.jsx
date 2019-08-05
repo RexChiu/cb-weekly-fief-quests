@@ -3,14 +3,18 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { withFirebase } from "./firebase";
 import Home from "./Home.jsx";
 import Input from "./Input.jsx";
+import { dataReset } from "../constants";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      data: undefined
+      data: undefined,
+      isLoaded: false
     };
+
+    this._resetData = this._resetData.bind(this);
   }
 
   componentDidMount() {
@@ -30,9 +34,14 @@ class App extends React.Component {
         <div>
           <Route path="/" exact component={() => <Home data={data} />} />
           <Route path="/input" component={() => <Input data={data} />} />
+          <button onClick={this._resetData}>Reset Data</button>
         </div>
       </Router>
     ) : null;
+  }
+
+  _resetData() {
+    this.props.firebase.db.ref("data").set(dataReset);
   }
 }
 

@@ -8,60 +8,61 @@ export const directionNames = {
   SW: "South West",
   W: "West"
 };
+// appending an "empty" object into each fief, as firebase RT Database deletes the parent node if no children
 export const dataReset = {
   E: {
-    Bergdorf: "undefined",
-    Hochweg: "undefined",
-    Kranz: "undefined",
-    Osttal: "undefined",
-    Saegespaene: "undefined"
+    Bergdorf: { empty: "empty" },
+    Hochweg: { empty: "empty" },
+    Kranz: { empty: "empty" },
+    Osttal: { empty: "empty" },
+    Saegespaene: { empty: "empty" }
   },
   NE: {
-    Huegelstadt: "undefined",
-    "Mueller Haus": "undefined",
-    Saeuferbruecke: "undefined",
-    Weinrebe: "undefined",
-    Weinviertiel: "undefined"
+    Huegelstadt: { empty: "empty" },
+    "Mueller Haus": { empty: "empty" },
+    Saeuferbruecke: { empty: "empty" },
+    Weinrebe: { empty: "empty" },
+    Weinviertiel: { empty: "empty" }
   },
   NW: {
-    Ellbogen: "undefined",
-    Fallenberg: "undefined",
-    Kupferbach: "undefined",
-    Kupferdorf: "undefined",
-    Mainstadt: "undefined",
-    Maishofen: "undefined",
-    Nordtal: "undefined",
-    Plattland: "undefined",
-    Rijkslag: "undefined",
-    Stark: "undefined",
-    Westweg: "undefined"
+    Ellbogen: { empty: "empty" },
+    Fallenberg: { empty: "empty" },
+    Kupferbach: { empty: "empty" },
+    Kupferdorf: { empty: "empty" },
+    Mainstadt: { empty: "empty" },
+    Maishofen: { empty: "empty" },
+    Nordtal: { empty: "empty" },
+    Plattland: { empty: "empty" },
+    Rijkslag: { empty: "empty" },
+    Stark: { empty: "empty" },
+    Westweg: { empty: "empty" }
   },
   S: {
-    Dreiwaelder: "undefined",
-    Suedwald: "undefined"
+    Dreiwaelder: { empty: "empty" },
+    Suedwald: { empty: "empty" }
   },
   SE: {
-    "Das Bollwerk": "undefined",
-    Eisendorf: "undefined",
-    Hain: "undefined",
-    Rindermarkt: "undefined",
-    Steinklippe: "undefined",
-    Wiesenhuegel: "undefined"
+    "Das Bollwerk": { empty: "empty" },
+    Eisendorf: { empty: "empty" },
+    Hain: { empty: "empty" },
+    Rindermarkt: { empty: "empty" },
+    Steinklippe: { empty: "empty" },
+    Wiesenhuegel: { empty: "empty" }
   },
   SW: {
-    "Eerste Feurstelle": "undefined",
-    Eisenhuegel: "undefined",
-    Fischerstadt: "undefined",
-    Gruenefeld: "undefined",
-    Koenigsbruecke: "undefined",
-    Ostensee: "undefined",
-    Stranddorf: "undefined",
-    "Suedden Anlegeplatz": "undefined",
-    Wildenhag: "undefined"
+    "Eerste Feurstelle": { empty: "empty" },
+    Eisenhuegel: { empty: "empty" },
+    Fischerstadt: { empty: "empty" },
+    Gruenefeld: { empty: "empty" },
+    Koenigsbruecke: { empty: "empty" },
+    Ostensee: { empty: "empty" },
+    Stranddorf: { empty: "empty" },
+    "Suedden Anlegeplatz": { empty: "empty" },
+    Wildenhag: { empty: "empty" }
   },
   W: {
-    "Alter Westberg": "undefined",
-    Westberg: "undefined"
+    "Alter Westberg": { empty: "empty" },
+    Westberg: { empty: "empty" }
   }
 };
 export const questLevels = [3, 4, 5];

@@ -1,27 +1,17 @@
 import React from "react";
 import FiefInput from "./FiefInput.jsx";
-import { directions, directionNames, dataReset } from "../constants";
+import { directions, directionNames } from "../constants";
 
 class Input extends React.Component {
   constructor(props) {
     super(props);
 
-    this._resetData = this._resetData.bind(this);
     this._renderDirection = this._renderDirection.bind(this);
     this._renderInputs = this._renderInputs.bind(this);
   }
 
   render() {
-    return (
-      <div>
-        {this._renderInputs()}
-        {/* <button onClick={this._resetData}>Reset Data</button> */}
-      </div>
-    );
-  }
-
-  _resetData() {
-    this.props.firebase.db.ref("data").set(dataReset);
+    return <div>{this._renderInputs()}</div>;
   }
 
   _renderInputs() {
