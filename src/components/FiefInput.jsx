@@ -92,7 +92,8 @@ class FiefInput extends React.Component {
     });
   }
 
-  _onSubmit() {
+  _onSubmit(event) {
+    event.preventDefault();
     const { name, direction } = this.props;
     const { level, material, materialCount } = this.state;
     if (!level || !material || !materialCount) {
