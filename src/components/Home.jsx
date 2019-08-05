@@ -33,14 +33,10 @@ class Home extends React.Component {
         if (quests[fief]) {
           return (
             <div key={fief}>
-              <div className="container">
-                <h4>
-                  {fief} - {directionNames[data[fief].direction]}
-                </h4>
-              </div>
-              <div className="container">
-                {this._renderQuests(quests[fief])}
-              </div>
+              <h4>
+                {fief} - {directionNames[data[fief].direction]}
+              </h4>
+              {this._renderQuests(quests[fief])}
             </div>
           );
         } else {
@@ -55,7 +51,7 @@ class Home extends React.Component {
     for (let quest in quests) {
       renderedQuests.push(
         <div className="row" key={quest}>
-          <div className="col-xs-12">{`${quests[quest].materialCount} ${
+          <div className="col-xs-6">{`${quests[quest].materialCount} ${
             quests[quest].material
           }`}</div>
         </div>
