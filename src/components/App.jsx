@@ -46,7 +46,6 @@ class App extends React.Component {
   }
 
   _parseData(snap) {
-    console.log(snap);
     let parsedData = {};
     for (let fief in snap) {
       let direction = snap[fief].direction;
