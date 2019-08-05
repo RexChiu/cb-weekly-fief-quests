@@ -27,10 +27,10 @@ class Input extends React.Component {
   _renderInputs() {
     return directions.map(direction => {
       return (
-        <React.Fragment key={direction}>
-          <h3>{directionNames[direction]}</h3>
+        <div key={direction}>
+          <h2>{directionNames[direction]}</h2>
           {this._renderDirection(direction)}
-        </React.Fragment>
+        </div>
       );
     });
   }
