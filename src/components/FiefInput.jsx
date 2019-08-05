@@ -11,6 +11,7 @@ class FiefInput extends React.Component {
     this._onLevelChange = this._onLevelChange.bind(this);
     this._onMaterialChange = this._onMaterialChange.bind(this);
     this._onMaterialCountChange = this._onMaterialCountChange.bind(this);
+    this._onSubmit = this._onSubmit.bind(this);
   }
   state = {
     level: undefined,
@@ -40,6 +41,7 @@ class FiefInput extends React.Component {
               <Select
                 placeholder="Material"
                 options={this._optionify(materials)}
+                onChange={this._onMaterialChange}
               />
             </div>
           </div>
@@ -48,6 +50,7 @@ class FiefInput extends React.Component {
               <Creatable
                 placeholder="Count"
                 options={this._optionify(materialCount)}
+                onChange={this._onMaterialCountChange}
               />
             </div>
           </div>
@@ -85,6 +88,8 @@ class FiefInput extends React.Component {
       materialCount: event.value
     });
   }
+
+  _onSubmit() {}
 }
 
 export default withFirebase(FiefInput);
