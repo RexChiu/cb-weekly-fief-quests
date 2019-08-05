@@ -29,22 +29,24 @@ class Home extends React.Component {
 
   _renderStarQuests(quests, data) {
     return directions.map(direction => {
-      for (let fief in displayOrder[direction]) {
+      return Object.values(displayOrder[direction]).map(fief => {
         if (quests[fief]) {
           return (
-            <>
-              <div className="container" key={fief}>
+            <div key={fief}>
+              <div className="container">
                 <h4>
                   {fief} - {directionNames[data[fief].direction]}
                 </h4>
               </div>
-              <div className="container" key={fief}>
+              <div className="container">
                 {this._renderQuests(quests[fief])}
               </div>
-            </>
+            </div>
           );
+        } else {
+          return null;
         }
-      }
+      });
     });
   }
 
