@@ -25,7 +25,7 @@ class FiefQuests extends React.Component {
 
     return data.map(quest => {
       return (
-        <div className="row">
+        <div className="row" key={quest.key}>
           {quest.level}* - {quest.material} x{quest.materialCount}
           <div className="col-xs-1">
             <button onClick={() => this.props.onDelete(quest.key)}>

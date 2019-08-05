@@ -94,14 +94,14 @@ class FiefInput extends React.Component {
 
   _onSubmit(event) {
     event.preventDefault();
-    const { name, direction } = this.props;
+    const { name } = this.props;
     const { level, material, materialCount } = this.state;
     if (!level || !material || !materialCount) {
       alert("Form cannot be empty!");
       return;
     }
 
-    this.props.firebase.db.ref(`data/${direction}/${name}`).push({
+    this.props.firebase.db.ref(`data/${name}`).push({
       level: level,
       material: material,
       materialCount: materialCount
@@ -109,8 +109,8 @@ class FiefInput extends React.Component {
   }
 
   _deleteQuest(key) {
-    const { name, direction } = this.props;
-    this.props.firebase.db.ref(`data/${direction}/${name}/${key}`).remove();
+    const { name } = this.props;
+    this.props.firebase.db.ref(`data/${name}/${key}`).remove();
   }
 }
 

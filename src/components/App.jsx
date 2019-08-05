@@ -19,7 +19,8 @@ class App extends React.Component {
 
   componentDidMount() {
     const onSuccess = snap => {
-      this.setState({ data: snap.val(), isLoaded: true });
+      let parsedData = this._parseData(snap.val());
+      this.setState({ data: parsedData, isLoaded: true });
     };
     const onFailure = () => {
       alert("Unable to retrieve data!");
@@ -42,6 +43,20 @@ class App extends React.Component {
 
   _resetData() {
     this.props.firebase.db.ref("data").set(dataReset);
+  }
+
+  _parseData(snap) {
+    console.log(snap);
+    let parsedData = {};
+    for (let fief in snap) {
+      let direction = snap[fief].direction;
+      // can't do parsedData[direction][fief] without initializing parsedData[direction]
+      if (!parsedData[direction]) {
+        parsedData[direction] = {};
+      }
+      parsedData[direction][fief] = snap[fief];
+    }
+    return parsedData;
   }
 }
 
