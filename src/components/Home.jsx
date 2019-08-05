@@ -17,11 +17,17 @@ class Home extends React.Component {
     const { data } = this.props;
     return (
       <>
-        <h2>Five Star Fief Quests</h2>
+        <u>
+          <h2>Five Star Fief Quests</h2>
+        </u>
         {this._renderStarQuests(fiveStarQuests, data)}
-        <h2>Four Star Fief Quests</h2>
+        <u>
+          <h2>Four Star Fief Quests</h2>
+        </u>
         {this._renderStarQuests(fourStarQuests, data)}
-        <h2>Three Star Fief Quests</h2>
+        <u>
+          <h2>Three Star Fief Quests</h2>
+        </u>
         {this._renderStarQuests(threeStarQuests, data)}
       </>
     );
