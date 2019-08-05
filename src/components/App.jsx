@@ -14,13 +14,13 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.props.firebase.db
-      .ref("data")
-      .once("value")
-      .then(snap => {
-        this.setState({ data: snap.val(), isLoaded: true });
-      })
-      .catch(() => alert("Failed to retrieve data!"));
+    const onSuccess = snap => {
+      this.setState({ data: snap.val(), isLoaded: true });
+    };
+    const onFailure = () => {
+      alert("Unable to retrieve data!");
+    };
+    this.props.firebase.db.ref("data").on("value", onSuccess, onFailure);
   }
 
   render() {

@@ -55,7 +55,7 @@ class FiefInput extends React.Component {
             </div>
           </div>
           <div className="col-xs-1">
-            <button>Add</button>
+            <button onClick={this._onSubmit}>Add</button>
           </div>
         </div>
       </div>
@@ -89,7 +89,20 @@ class FiefInput extends React.Component {
     });
   }
 
-  _onSubmit() {}
+  _onSubmit() {
+    const { name, direction } = this.props;
+    const { level, material, materialCount } = this.state;
+    if (!level || !material || !materialCount) {
+      alert("Form cannot be empty!");
+      return;
+    }
+
+    this.props.firebase.db.ref(`data/${direction}/${name}`).push({
+      level: level,
+      material: material,
+      materialCount: materialCount
+    });
+  }
 }
 
 export default withFirebase(FiefInput);
