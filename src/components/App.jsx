@@ -33,8 +33,10 @@ class App extends React.Component {
       <Router>
         <div>
           <Route path="/" exact component={() => <Home data={data} />} />
-          <Route path="/input" component={() => <Input data={data} />} />
-          <button onClick={this._resetData}>Reset Data</button>
+          <Route
+            path="/input"
+            component={() => <Input data={data} resetData={this._resetData} />}
+          />
         </div>
       </Router>
     ) : null;

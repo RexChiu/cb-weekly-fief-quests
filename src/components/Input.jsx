@@ -11,7 +11,12 @@ class Input extends React.Component {
   }
 
   render() {
-    return <div>{this._renderInputs()}</div>;
+    return (
+      <div>
+        {this._renderInputs()}
+        <button onClick={this.props.resetData}>Reset Data</button>
+      </div>
+    );
   }
 
   _renderInputs() {
