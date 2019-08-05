@@ -5,10 +5,17 @@ import Creatable from "react-select/creatable";
 import { questLevels, materials, materialCount } from "../constants";
 
 class FiefInput extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this._onLevelChange = this._onLevelChange.bind(this);
+    this._onMaterialChange = this._onMaterialChange.bind(this);
+    this._onMaterialCountChange = this._onMaterialCountChange.bind(this);
+  }
   state = {
-    questLevel: undefined,
-    questName: undefined,
-    questCount: undefined
+    level: undefined,
+    material: undefined,
+    materialCount: undefined
   };
 
   render() {
@@ -24,6 +31,7 @@ class FiefInput extends React.Component {
               <Select
                 placeholder="Level"
                 options={this._optionify(questLevels)}
+                onChange={this._onLevelChange}
               />
             </div>
           </div>
@@ -43,6 +51,9 @@ class FiefInput extends React.Component {
               />
             </div>
           </div>
+          <div className="col-xs-1">
+            <button>Add</button>
+          </div>
         </div>
       </div>
     );
@@ -54,6 +65,24 @@ class FiefInput extends React.Component {
         label: option,
         value: option
       };
+    });
+  }
+
+  _onLevelChange(event) {
+    this.setState({
+      level: event.value
+    });
+  }
+
+  _onMaterialChange(event) {
+    this.setState({
+      material: event.value
+    });
+  }
+
+  _onMaterialCountChange(event) {
+    this.setState({
+      materialCount: event.value
     });
   }
 }
