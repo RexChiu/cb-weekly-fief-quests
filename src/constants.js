@@ -8,6 +8,63 @@ export const directionNames = {
   SW: "South West",
   W: "West"
 };
+// order to display the quests in a neat way
+export const displayOrder = {
+  NW: {
+    Westweg: "Westweg",
+    Mainstadt: "Mainstadt",
+    Nordtal: "Nordtal",
+    Fallenberg: "Fallenberg",
+    Kupferbach: "Kupferbach",
+    Stark: "Stark",
+    Kupferdorf: "Kupferdorf",
+    Plattland: "Plattland",
+    Rijkslag: "Rijkslag",
+    Maishofen: "Maishofen",
+    Ellbogen: "Ellbogen"
+  },
+  NE: {
+    Saeuferbruecke: "Saeuferbruecke",
+    Huegelstadt: "Huegelstadt",
+    Weinviertiel: "Weinviertiel",
+    Weinrebe: "Weinrebe",
+    "Mueller Haus": "Mueller Haus"
+  },
+  E: {
+    Bergdorf: "Bergdorf",
+    Kranz: "Kranz",
+    Osttal: "Osttal",
+    Saegespaene: "Saegespaene",
+    Hochweg: "Hochweg"
+  },
+  SE: {
+    Wiesenhuegel: "Wiesenhuegel",
+    Steinklippe: "Steinklippe",
+    Hain: "Hain",
+    Rindermarkt: "Rindermarkt",
+    "Das Bollwerk": "Das Bollwerk",
+    Eisendorf: "Eisendorf"
+  },
+  S: {
+    Dreiwaelder: "Dreiwaelder",
+    Suedwald: "Suedwald"
+  },
+  SW: {
+    Koenigsbruecke: "Koenigsbruecke",
+    Fischerstadt: "Fischerstadt",
+    Ostensee: "Ostensee",
+    "Suedden Anlegeplatz": "Suedden Anlegeplatz",
+    Stranddorf: "Stranddorf",
+    "Eerste Feurstelle": "Eerste Feurstelle",
+    Eisenhuegel: "Eisenhuegel",
+    Gruenefeld: "Gruenefeld",
+    Wildenhag: "Wildenhag"
+  },
+  W: {
+    "Alter Westberg": "Alter Westberg",
+    Westberg: "Westberg"
+  }
+};
 // appending an "empty" object into each fief, as firebase RT Database deletes the parent node if no children
 export const dataReset = {
   "Alter Westberg": {

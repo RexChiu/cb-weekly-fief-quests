@@ -1,6 +1,6 @@
 import React from "react";
 import FiefInput from "./FiefInput.jsx";
-import { directions, directionNames } from "../constants";
+import { directions, directionNames, displayOrder } from "../constants";
 
 class Input extends React.Component {
   constructor(props) {
@@ -26,15 +26,14 @@ class Input extends React.Component {
   }
 
   _renderDirection(direction) {
-    const directionData = this.props.data[direction];
-    const keys = Object.keys(directionData);
-    return keys.map(key => {
+    let directionFiefs = Object.keys(displayOrder[direction]);
+    return directionFiefs.map(fief => {
       return (
         <FiefInput
           direction={direction}
-          name={key}
-          key={key}
-          data={directionData[key]}
+          name={fief}
+          key={fief}
+          data={this.props.data[fief]}
         />
       );
     });
