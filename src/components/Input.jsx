@@ -1,6 +1,10 @@
 import React from "react";
 import FiefInput from "./FiefInput.jsx";
-import { directions, directionNames, displayOrder } from "../constants";
+import {
+  LiangyunDirections,
+  directionNames,
+  LiangyunDisplayOrder
+} from "../constants";
 
 class Input extends React.Component {
   constructor(props) {
@@ -20,7 +24,7 @@ class Input extends React.Component {
   }
 
   _renderInputs() {
-    return directions.map(direction => {
+    return LiangyunDirections.map(direction => {
       return (
         <div key={direction}>
           <h2>{directionNames[direction]}</h2>
@@ -31,7 +35,7 @@ class Input extends React.Component {
   }
 
   _renderDirection(direction) {
-    let directionFiefs = Object.keys(displayOrder[direction]);
+    let directionFiefs = Object.keys(LiangyunDisplayOrder[direction]);
     return directionFiefs.map(fief => {
       return (
         <FiefInput
