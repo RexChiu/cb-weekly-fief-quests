@@ -1,0 +1,171 @@
+{
+  "data": {
+    "Alter Westberg": {
+      "direction": "W"
+    },
+    "Bergdorf": {
+      "direction": "E"
+    },
+    "Das Bollwerk": {
+      "direction": "SE"
+    },
+    "Dreiwaelder": {
+      "direction": "S"
+    },
+    "Eerste Feurstelle": {
+      "direction": "SW"
+    },
+    "Eisendorf": {
+      "direction": "SE"
+    },
+    "Eisenhuegel": {
+      "direction": "SW"
+    },
+    "Ellbogen": {
+      "direction": "NW"
+    },
+    "Fallenberg": {
+      "direction": "NW"
+    },
+    "Fischerstadt": {
+      "direction": "SW"
+    },
+    "Gruenefeld": {
+      "direction": "SW"
+    },
+    "Hain": {
+      "direction": "SE"
+    },
+    "Hochweg": {
+      "direction": "E"
+    },
+    "Huegelstadt": {
+      "direction": "NE"
+    },
+    "Koenigsbruecke": {
+      "direction": "SW"
+    },
+    "Kranz": {
+      "direction": "E"
+    },
+    "Kupferbach": {
+      "direction": "NW"
+    },
+    "Kupferdorf": {
+      "direction": "NW"
+    },
+    "Mainstadt": {
+      "direction": "NW"
+    },
+    "Maishofen": {
+      "direction": "NW"
+    },
+    "Mueller Haus": {
+      "direction": "NE"
+    },
+    "Nordtal": {
+      "direction": "NW"
+    },
+    "Ostensee": {
+      "direction": "SW"
+    },
+    "Osttal": {
+      "direction": "E"
+    },
+    "Plattland": {
+      "direction": "NW"
+    },
+    "Rijkslag": {
+      "direction": "NW"
+    },
+    "Rindermarkt": {
+      "direction": "SE"
+    },
+    "Saegespaene": {
+      "direction": "E"
+    },
+    "Saeuferbruecke": {
+      "direction": "NE"
+    },
+    "Stark": {
+      "direction": "NW"
+    },
+    "Steinklippe": {
+      "direction": "SE"
+    },
+    "Stranddorf": {
+      "direction": "SW"
+    },
+    "Suedden Anlegeplatz": {
+      "direction": "SW"
+    },
+    "Suedwald": {
+      "direction": "S"
+    },
+    "Weinrebe": {
+      "direction": "NE"
+    },
+    "Weinviertiel": {
+      "direction": "NE"
+    },
+    "Westberg": {
+      "direction": "W"
+    },
+    "Westweg": {
+      "direction": "NW"
+    },
+    "Wiesenhuegel": {
+      "direction": "SE"
+    },
+    "Wildenhag": {
+      "direction": "SW"
+    }
+  },
+  "materials": [
+    "Rough Cotton",
+    "Coarse Cotton",
+    "Long Cotton",
+    "Fine Cotton",
+    "Siderite Ore",
+    "Magnetite",
+    "Limonite",
+    "Haematite",
+    "Chalcopyrite",
+    "Chalcocite",
+    "Digenite",
+    "Cuperite",
+    "Pigskin",
+    "Sheepskin",
+    "Goat Hide",
+    "Cow Hide",
+    "Pine Timber",
+    "Ash Timber",
+    "Oak Timber",
+    "Cedar Timber",
+    "Sandstone",
+    "Limestone",
+    "Marble",
+    "Granite",
+    "Food",
+    "Jennet",
+    "Courser",
+    "Barb",
+    "Rouncey",
+    "Common Rebel Melee Weapons",
+    "Uncommon Rebel Melee Weapons",
+    "Rare Rebel Melee Weapons",
+    "Elite Rebel Melee Weapons",
+    "Common Rebel Ranged Weapons",
+    "Uncommon Rebel Ranged Weapons",
+    "Rare Rebel Ranged Weapons",
+    "Elite Rebel Ranged Weapons",
+    "Common Rebel Cavalry Weapons",
+    "Uncommon Rebel Cavalry Weapons",
+    "Rare Rebel Cavalry Weapons",
+    "Elite Rebel Cavalry Weapons",
+    "New Rebel Officer's Personal Items",
+    "Junior Rebel Officer's Personal Items",
+    "Senior Rebel Officer's Personal Items",
+    "Elite Rebel Officer's Personal Items"
+  ]
+}

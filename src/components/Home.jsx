@@ -1,5 +1,9 @@
 import React from "react";
-import { directions, directionNames, displayOrder } from "../constants";
+import {
+  LiangyunDirections,
+  directionNames,
+  LiangyunDisplayOrder
+} from "../constants";
 
 class Home extends React.Component {
   constructor(props) {
@@ -13,7 +17,12 @@ class Home extends React.Component {
     this._parseData = this._parseData.bind(this);
   }
   render() {
-    const { threeStarQuests, fourStarQuests, fiveStarQuests } = this.state;
+    const {
+      twoStarQuests,
+      threeStarQuests,
+      fourStarQuests,
+      fiveStarQuests
+    } = this.state;
     const { data } = this.props;
     return (
       <>
@@ -29,13 +38,17 @@ class Home extends React.Component {
           <h2>Three Star Fief Quests</h2>
         </u>
         {this._renderStarQuests(threeStarQuests, data)}
+        <u>
+          <h2>Two Star Fief Quests</h2>
+        </u>
+        {this._renderStarQuests(twoStarQuests, data)}
       </>
     );
   }
 
   _renderStarQuests(quests, data) {
-    return directions.map(direction => {
-      return Object.values(displayOrder[direction]).map(fief => {
+    return LiangyunDirections.map(direction => {
+      return Object.values(LiangyunDisplayOrder[direction]).map(fief => {
         if (quests[fief]) {
           return (
             <div key={fief}>
@@ -64,6 +77,7 @@ class Home extends React.Component {
     let fiveStarQuests = {};
     let fourStarQuests = {};
     let threeStarQuests = {};
+    let twoStarQuests = {};
 
     for (let fief in data) {
       for (let quest in data[fief]) {
@@ -73,6 +87,9 @@ class Home extends React.Component {
         }
         // groups the quests into 3, 4, or 5 stars
         switch (data[fief][quest].level) {
+          case 2:
+            this._addToQuests(twoStarQuests, fief, quest, data[fief][quest]);
+            break;
           case 3:
             this._addToQuests(threeStarQuests, fief, quest, data[fief][quest]);
             break;
@@ -89,6 +106,7 @@ class Home extends React.Component {
     }
 
     return {
+      twoStarQuests: twoStarQuests,
       threeStarQuests: threeStarQuests,
       fourStarQuests: fourStarQuests,
       fiveStarQuests: fiveStarQuests

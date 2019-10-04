@@ -1,0 +1,177 @@
+{
+  "data": {
+    "Aikou": {
+      "direction": "W"
+    },
+    "Baoshao": {
+      "direction": "NW"
+    },
+    "Caishi": {
+      "direction": "N"
+    },
+    "Caolai": {
+      "direction": "NW"
+    },
+    "Dahe": {
+      "direction": "SW"
+    },
+    "Danqi": {
+      "direction": "NW"
+    },
+    "Daolu": {
+      "direction": "NE"
+    },
+    "Gao Qiang": {
+      "direction": "S"
+    },
+    "Gaoda": {
+      "direction": "NE"
+    },
+    "Hani": {
+      "direction": "SE"
+    },
+    "Haoliang": {
+      "direction": "S"
+    },
+    "He'an": {
+      "direction": "E"
+    },
+    "Hebao": {
+      "direction": "W"
+    },
+    "Heishan": {
+      "direction": "E"
+    },
+    "Helie": {
+      "direction": "NW"
+    },
+    "Heng": {
+      "direction": "N"
+    },
+    "Hongsong": {
+      "direction": "NE"
+    },
+    "Jianggong": {
+      "direction": "W"
+    },
+    "Jiedi": {
+      "direction": "W"
+    },
+    "Jindai": {
+      "direction": "NE"
+    },
+    "Jishi": {
+      "direction": "SW"
+    },
+    "Kangtu": {
+      "direction": "S"
+    },
+    "Kuanggong": {
+      "direction": "N"
+    },
+    "Lanshi": {
+      "direction": "NW"
+    },
+    "Louge": {
+      "direction": "W"
+    },
+    "Maang": {
+      "direction": "W"
+    },
+    "Mingyu": {
+      "direction": "NW"
+    },
+    "Narth": {
+      "direction": "E"
+    },
+    "Renlin": {
+      "direction": "SW"
+    },
+    "Samat": {
+      "direction": "NE"
+    },
+    "Shanlu": {
+      "direction": "W"
+    },
+    "Tiekuang": {
+      "direction": "SE"
+    },
+    "Tsakhir": {
+      "direction": "NE"
+    },
+    "Xiaocheng": {
+      "direction": "N"
+    },
+    "Yangma": {
+      "direction": "E"
+    },
+    "Yichu": {
+      "direction": "SW"
+    },
+    "Yixi": {
+      "direction": "SE"
+    },
+    "Yuanxin": {
+      "direction": "E"
+    },
+    "Yue": {
+      "direction": "S"
+    },
+    "Yumi": {
+      "direction": "N"
+    },
+    "Zandin": {
+      "direction": "NW"
+    },
+    "Zaoliang": {
+      "direction": "E"
+    }
+  },
+  "materials": [
+    "Rough Cotton",
+    "Coarse Cotton",
+    "Long Cotton",
+    "Fine Cotton",
+    "Siderite Ore",
+    "Magnetite",
+    "Limonite",
+    "Haematite",
+    "Chalcopyrite",
+    "Chalcocite",
+    "Digenite",
+    "Cuperite",
+    "Pigskin",
+    "Sheepskin",
+    "Goat Hide",
+    "Cow Hide",
+    "Pine Timber",
+    "Ash Timber",
+    "Oak Timber",
+    "Cedar Timber",
+    "Sandstone",
+    "Limestone",
+    "Marble",
+    "Granite",
+    "Food",
+    "Jennet",
+    "Courser",
+    "Barb",
+    "Rouncey",
+    "Common Rebel Melee Weapons",
+    "Uncommon Rebel Melee Weapons",
+    "Rare Rebel Melee Weapons",
+    "Elite Rebel Melee Weapons",
+    "Common Rebel Ranged Weapons",
+    "Uncommon Rebel Ranged Weapons",
+    "Rare Rebel Ranged Weapons",
+    "Elite Rebel Ranged Weapons",
+    "Common Rebel Cavalry Weapons",
+    "Uncommon Rebel Cavalry Weapons",
+    "Rare Rebel Cavalry Weapons",
+    "Elite Rebel Cavalry Weapons",
+    "New Rebel Officer's Personal Items",
+    "Junior Rebel Officer's Personal Items",
+    "Senior Rebel Officer's Personal Items",
+    "Elite Rebel Officer's Personal Items"
+  ]
+}

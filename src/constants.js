@@ -1,4 +1,6 @@
-export const directions = ["NW", "NE", "E", "SE", "S", "SW", "W"];
+export const OstariaDirections = ["NW", "NE", "E", "SE", "S", "SW", "W"];
+export const LiangyunDirections = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
+
 export const directionNames = {
   NW: "North West",
   NE: "North East",
@@ -9,7 +11,7 @@ export const directionNames = {
   W: "West"
 };
 // order to display the quests in a neat way
-export const displayOrder = {
+export const OstariaDisplayOrder = {
   NW: {
     Westweg: "Westweg",
     Mainstadt: "Mainstadt",
@@ -66,7 +68,67 @@ export const displayOrder = {
   }
 };
 // appending an "empty" object into each fief, as firebase RT Database deletes the parent node if no children
-export const dataReset = {
+export const LiangyunDisplayOrder = {
+  N: {
+    Kuanggong: "Kuanggong",
+    Xiaocheng: "Xiaocheng",
+    Yumi: "Yumi",
+    Caishi: "Caishi",
+    Heng: "Heng"
+  },
+  NE: {
+    Gaoda: "Gaoda",
+    Samat: "Samat",
+    Jindai: "Jindai",
+    Hongsong: "Hongsong",
+    Tsakhir: "Tsakhir",
+    Daolu: "Daolu"
+  },
+  E: {
+    Yangma: "Yangma",
+    Yuanxin: "Yuanxin",
+    "He'an": "He'an",
+    Zaoliang: "Zaoliang",
+    Heishan: "Heishan",
+    Narth: "Narth"
+  },
+  SE: {
+    Hani: "Hani",
+    Yixi: "Yixi",
+    Tiekuang: "Tiekuang"
+  },
+  S: {
+    Haoliang: "Haoliang",
+    Yue: "Yue",
+    "Gao Qiang": "Gao Qiang",
+    Kangtu: "Kangtu"
+  },
+  SW: {
+    Jishi: "Jishi",
+    Yichu: "Yichu",
+    Renlin: "Renlin",
+    Dahe: "Dahe"
+  },
+  W: {
+    Hebao: "Hebao",
+    Jiedi: "Jiedi",
+    Jianggong: "Jianggong",
+    Aikou: "Aikou",
+    Louge: "Louge",
+    Maang: "Maang",
+    Shanlu: "Shanlu"
+  },
+  NW: {
+    Helie: "Helie",
+    Zandin: "Zandin",
+    Lanshi: "Lanshi",
+    Mingyu: "Mingyu",
+    Baoshao: "Baoshao",
+    Danqi: "Danqi",
+    Caolai: "Caolai"
+  }
+};
+export const OstariaDataReset = {
   "Alter Westberg": {
     direction: "W"
   },
@@ -188,7 +250,7 @@ export const dataReset = {
     direction: "SW"
   }
 };
-export const questLevels = [3, 4, 5];
+export const questLevels = [2, 3, 4, 5];
 export const materials = [
   "Rough Cotton",
   "Coarse Cotton",
