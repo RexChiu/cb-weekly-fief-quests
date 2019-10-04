@@ -2,6 +2,7 @@ export const OstariaDirections = ["NW", "NE", "E", "SE", "S", "SW", "W"];
 export const LiangyunDirections = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
 
 export const directionNames = {
+  N: "North",
   NW: "North West",
   NE: "North East",
   E: "East",
