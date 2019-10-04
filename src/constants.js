@@ -95,7 +95,8 @@ export const LiangyunDisplayOrder = {
   SE: {
     Hani: "Hani",
     Yixi: "Yixi",
-    Tiekuang: "Tiekuang"
+    Tiekuang: "Tiekuang",
+    Senlin: "Senlin"
   },
   S: {
     Haoliang: "Haoliang",
@@ -248,6 +249,137 @@ export const OstariaDataReset = {
   },
   Wildenhag: {
     direction: "SW"
+  }
+};
+export const LiangyunDataReset = {
+  Aikou: {
+    direction: "W"
+  },
+  Baoshao: {
+    direction: "NW"
+  },
+  Caishi: {
+    direction: "N"
+  },
+  Caolai: {
+    direction: "NW"
+  },
+  Dahe: {
+    direction: "SW"
+  },
+  Danqi: {
+    direction: "NW"
+  },
+  Daolu: {
+    direction: "NE"
+  },
+  "Gao Qiang": {
+    direction: "S"
+  },
+  Gaoda: {
+    direction: "NE"
+  },
+  Hani: {
+    direction: "SE"
+  },
+  Haoliang: {
+    direction: "S"
+  },
+  "He'an": {
+    direction: "E"
+  },
+  Hebao: {
+    direction: "W"
+  },
+  Heishan: {
+    direction: "E"
+  },
+  Helie: {
+    direction: "NW"
+  },
+  Heng: {
+    direction: "N"
+  },
+  Hongsong: {
+    direction: "NE"
+  },
+  Jianggong: {
+    direction: "W"
+  },
+  Jiedi: {
+    direction: "W"
+  },
+  Jindai: {
+    direction: "NE"
+  },
+  Jishi: {
+    direction: "SW"
+  },
+  Kangtu: {
+    direction: "S"
+  },
+  Kuanggong: {
+    direction: "N"
+  },
+  Lanshi: {
+    direction: "NW"
+  },
+  Louge: {
+    direction: "W"
+  },
+  Maang: {
+    direction: "W"
+  },
+  Mingyu: {
+    direction: "NW"
+  },
+  Narth: {
+    direction: "E"
+  },
+  Renlin: {
+    direction: "SW"
+  },
+  Samat: {
+    direction: "NE"
+  },
+  Senlin: {
+    direction: "SE"
+  },
+  Shanlu: {
+    direction: "W"
+  },
+  Tiekuang: {
+    direction: "SE"
+  },
+  Tsakhir: {
+    direction: "NE"
+  },
+  Xiaocheng: {
+    direction: "N"
+  },
+  Yangma: {
+    direction: "E"
+  },
+  Yichu: {
+    direction: "SW"
+  },
+  Yixi: {
+    direction: "SE"
+  },
+  Yuanxin: {
+    direction: "E"
+  },
+  Yue: {
+    direction: "S"
+  },
+  Yumi: {
+    direction: "N"
+  },
+  Zandin: {
+    direction: "NW"
+  },
+  Zaoliang: {
+    direction: "E"
   }
 };
 export const questLevels = [2, 3, 4, 5];
