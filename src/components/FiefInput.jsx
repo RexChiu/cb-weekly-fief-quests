@@ -28,7 +28,7 @@ class FiefInput extends React.Component {
           <h3>{name}</h3>
         </div>
         <FiefQuests data={data} onDelete={this._deleteQuest} />
-        <div className="row">
+        <form onSubmit={this._onSubmit} className="row">
           <div className="col-xs-1">
             <div className="box">
               <Select
@@ -57,9 +57,9 @@ class FiefInput extends React.Component {
             </div>
           </div>
           <div className="col-xs-1">
-            <button onClick={this._onSubmit}>Add</button>
+            <button>Add</button>
           </div>
-        </div>
+        </form>
       </div>
     );
   }
