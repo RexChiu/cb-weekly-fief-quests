@@ -17,7 +17,7 @@ class FiefInput extends React.Component {
   state = {
     level: undefined,
     material: undefined,
-    materialCount: undefined
+    materialCount: undefined,
   };
 
   render() {
@@ -65,29 +65,29 @@ class FiefInput extends React.Component {
   }
 
   _optionify(options) {
-    return options.map(option => {
+    return options.map((option) => {
       return {
         label: option,
-        value: option
+        value: option,
       };
     });
   }
 
   _onLevelChange(event) {
     this.setState({
-      level: event.value
+      level: event.value,
     });
   }
 
   _onMaterialChange(event) {
     this.setState({
-      material: event.value
+      material: event.value,
     });
   }
 
   _onMaterialCountChange(event) {
     this.setState({
-      materialCount: event.value
+      materialCount: event.target.value,
     });
   }
 
@@ -103,7 +103,7 @@ class FiefInput extends React.Component {
     this.props.firebase.db.ref(`data/${name}`).push({
       level: level,
       material: material,
-      materialCount: materialCount
+      materialCount: materialCount,
     });
   }
 
