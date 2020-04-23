@@ -1,8 +1,8 @@
 import React from "react";
 import {
-  LiangyunDirections,
+  OstariaDirections,
   directionNames,
-  LiangyunDisplayOrder
+  OstariaDisplayOrder
 } from "../constants";
 
 class Home extends React.Component {
@@ -47,8 +47,8 @@ class Home extends React.Component {
   }
 
   _renderStarQuests(quests, data) {
-    return LiangyunDirections.map(direction => {
-      return Object.values(LiangyunDisplayOrder[direction]).map(fief => {
+    return OstariaDirections.map(direction => {
+      return Object.values(OstariaDisplayOrder[direction]).map(fief => {
         if (quests[fief]) {
           return (
             <div key={fief}>

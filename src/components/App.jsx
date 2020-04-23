@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { withFirebase } from "./firebase";
 import Home from "./Home.jsx";
 import Input from "./Input.jsx";
-import { LiangyunDataReset } from "../constants";
+import { OstariaDataReset } from "../constants";
 
 class App extends React.Component {
   constructor(props) {
@@ -43,7 +43,7 @@ class App extends React.Component {
   }
 
   _resetData() {
-    this.props.firebase.db.ref("data").set(LiangyunDataReset);
+    this.props.firebase.db.ref("data").set(OstariaDataReset);
   }
 }
 
