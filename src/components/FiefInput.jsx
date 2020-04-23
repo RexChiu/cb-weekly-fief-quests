@@ -1,8 +1,7 @@
 import React from "react";
 import { withFirebase } from "./firebase";
 import Select from "react-select";
-import Creatable from "react-select/creatable";
-import { questLevels, materials, materialCount } from "../constants";
+import { questLevels, materials } from "../constants";
 import FiefQuests from "./FiefQuests.jsx";
 
 class FiefInput extends React.Component {
@@ -50,9 +49,9 @@ class FiefInput extends React.Component {
           </div>
           <div className="col-xs-1">
             <div className="box">
-              <Creatable
+              <input
                 placeholder="Count"
-                options={this._optionify(materialCount)}
+                value={this.state.materialCount}
                 onChange={this._onMaterialCountChange}
               />
             </div>
