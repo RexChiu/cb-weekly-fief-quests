@@ -3,7 +3,7 @@ import FiefInput from "./FiefInput.jsx";
 import {
   OstariaDirections,
   directionNames,
-  OstariaDisplayOrder
+  OstariaDisplayOrder,
 } from "../constants";
 
 class Input extends React.Component {
@@ -17,14 +17,14 @@ class Input extends React.Component {
   render() {
     return (
       <div>
-        {this._renderInputs()}
         <button onClick={this.props.resetData}>Reset Data</button>
+        {this._renderInputs()}
       </div>
     );
   }
 
   _renderInputs() {
-    return OstariaDirections.map(direction => {
+    return OstariaDirections.map((direction) => {
       return (
         <div key={direction}>
           <h2>{directionNames[direction]}</h2>
@@ -36,7 +36,7 @@ class Input extends React.Component {
 
   _renderDirection(direction) {
     let directionFiefs = Object.keys(OstariaDisplayOrder[direction]);
-    return directionFiefs.map(fief => {
+    return directionFiefs.map((fief) => {
       return (
         <FiefInput
           direction={direction}

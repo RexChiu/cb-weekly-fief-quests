@@ -1,7 +1,7 @@
 import React from "react";
 import { withFirebase } from "./firebase";
 import Select from "react-select";
-import { questLevels, materials } from "../constants";
+import { questLevels, materials, materialsCountMap } from "../constants";
 import FiefQuests from "./FiefQuests.jsx";
 
 class FiefInput extends React.Component {
@@ -15,13 +15,19 @@ class FiefInput extends React.Component {
     this._deleteQuest = this._deleteQuest.bind(this);
   }
   state = {
-    level: undefined,
-    material: undefined,
-    materialCount: undefined,
+    level: "",
+    material: "",
+    materialCount: "",
   };
 
   render() {
     const { name, data } = this.props;
+    const { level, material, materialCount } = this.state;
+    let placeholderValue = "";
+    if (level && material) {
+      placeholderValue = materialsCountMap[material][level];
+    }
+
     return (
       <div>
         <div className="row">
@@ -51,7 +57,7 @@ class FiefInput extends React.Component {
             <div className="box">
               <input
                 placeholder="Count"
-                value={this.state.materialCount}
+                value={materialCount || placeholderValue}
                 onChange={this._onMaterialCountChange}
               />
             </div>
