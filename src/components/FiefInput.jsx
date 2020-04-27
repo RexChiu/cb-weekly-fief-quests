@@ -56,6 +56,7 @@ class FiefInput extends React.Component {
           <div className="col-xs-1">
             <div className="box">
               <input
+                name="materialCount"
                 placeholder="Count"
                 value={materialCount || placeholderValue}
                 onChange={this._onMaterialCountChange}
@@ -101,7 +102,11 @@ class FiefInput extends React.Component {
     event.preventDefault();
     const { name } = this.props;
     const { level, material, materialCount } = this.state;
-    if (!level || !material || !materialCount) {
+    if (
+      !level ||
+      !material ||
+      (!event.target.materialCount.value && !materialCount)
+    ) {
       alert("Form cannot be empty!");
       return;
     }
@@ -109,7 +114,7 @@ class FiefInput extends React.Component {
     this.props.firebase.db.ref(`data/${name}`).push({
       level: level,
       material: material,
-      materialCount: materialCount,
+      materialCount: materialCount || event.target.materialCount.value,
     });
   }
 
