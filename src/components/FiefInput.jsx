@@ -1,7 +1,12 @@
 import React from "react";
 import { withFirebase } from "./firebase";
 import Select from "react-select";
-import { questLevels, materials, materialsCountMap } from "../constants";
+import {
+  questLevels,
+  materials,
+  materialsCountMap,
+  rarityColours,
+} from "../constants";
 import FiefQuests from "./FiefQuests.jsx";
 
 class FiefInput extends React.Component {
@@ -28,6 +33,16 @@ class FiefInput extends React.Component {
       placeholderValue = materialsCountMap[material][level];
     }
 
+    const colourStyles = {
+      option: (styles, { data }) => {
+        const rarity = data.rarity;
+        return {
+          ...styles,
+          color: rarity ? rarityColours[rarity] : "#000000",
+        };
+      },
+    };
+
     return (
       <div>
         <div className="row">
@@ -39,7 +54,7 @@ class FiefInput extends React.Component {
             <div className="box">
               <Select
                 placeholder="Level"
-                options={this._optionify(questLevels)}
+                options={this._optionifyQuest(questLevels)}
                 onChange={this._onLevelChange}
               />
             </div>
@@ -48,8 +63,9 @@ class FiefInput extends React.Component {
             <div className="box">
               <Select
                 placeholder="Material"
-                options={this._optionify(materials)}
+                options={this._optionifyMaterial(materials)}
                 onChange={this._onMaterialChange}
+                styles={colourStyles}
               />
             </div>
           </div>
@@ -71,11 +87,21 @@ class FiefInput extends React.Component {
     );
   }
 
-  _optionify(options) {
+  _optionifyQuest(options) {
     return options.map((option) => {
       return {
         label: option,
         value: option,
+      };
+    });
+  }
+
+  _optionifyMaterial(options) {
+    return options.map((option) => {
+      return {
+        label: option.name,
+        value: option.name,
+        rarity: option.rarity,
       };
     });
   }
