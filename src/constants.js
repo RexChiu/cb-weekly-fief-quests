@@ -468,7 +468,7 @@ export const materialsCountMap = {
     5: "",
   },
   Haematite: {
-    3: 65000,
+    3: 6500,
     4: "",
     5: 14000,
   },
