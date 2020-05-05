@@ -558,7 +558,7 @@ export const materialsCountMap = {
     5: "",
   },
   Jennet: {
-    3: "",
+    3: 9,
     4: "",
     5: "",
   },
